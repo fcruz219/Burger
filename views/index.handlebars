@@ -2,21 +2,29 @@
 
 <h2>Eat some more burgers!</h2>
 
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      {{> burger/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+
+{{#each burger}}
+{{#unless this.devoured}}
+<div>
+  <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+    <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+  </form>
+</div>
+{{/unless}}
+{{/each}}
+
 
 <h2>Burgers you've eaten so far</h2>
 
 <ul>
   {{#each burger}}
-    {{#if devoured}}
-      {{> burger/burger-block devoured=true}}
-    {{/if}}
+  {{#if this.devoured}}
+  <div class="devoured">
+    <div>
+      {{this.burger_name}}
+    </div>
+  </div>
+  {{/if}}
   {{/each}}
 </ul>
 

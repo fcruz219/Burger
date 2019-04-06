@@ -10,7 +10,7 @@ router.get("/", function(req, res) {
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render('index', hbsObject)
     })
 
@@ -25,5 +25,14 @@ router.post("/burgers", function(req, res){
         res.redirect('/');
     })
 })
+router.put('/burgers/:id', function(req, res) {
+    var condition = 'id = ' + req.params.id;
+  
+    burger.updateOne({
+      devoured: true
+    }, condition, function(data) {
+      res.redirect('/');
+    });
+  });
 
 module.exports = router;

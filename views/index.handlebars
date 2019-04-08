@@ -1,6 +1,6 @@
-<h1>Burgers!</h1>
+<h1>Watch More Movies!!</h1>
 
-<h2>Eat some more burgers!</h2>
+<h2>Movies you want to watch!</h2>
 
 <main>
   <div class="container">
@@ -16,7 +16,7 @@
 {{/each}}
 </ul>
 
-<h2>Burgers you've eaten so far</h2>
+<h2>Seen it!</h2>
 
   {{#each burgers}}
   {{#if this.devoured}}
@@ -29,9 +29,9 @@
   {{/each}}
 </div>
 </main>
-<h2>Add a Burger</h2>
+<h2>Add a Movie</h2>
     <form action="/api/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Burger me here!">
-      <button type="submit" class="addBurger">Add The Burger</button>
+      <input type="text" id="name" name="burger_name" placeholder="Movie Name">
+      <button type="submit" class="addBurger">Add The Movie</button>
     </form>
   </div>

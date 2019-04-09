@@ -1,9 +1,19 @@
+<div class="header">
 <h1>Watch More Movies!!</h1>
+<div class="addButton">
+<h2>Add a Movie</h2>
+    <form action="/api/burgers" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Movie Name">
+      <button type="submit" class="addBurger">Add The Movie</button>
+    </form>
+  </div>
+</div>
 
-<h2>Movies you want to watch!</h2>
 
 <main>
   <div class="container">
+    <h2>Movies you want to watch!</h2>
+
         <ul>
 {{#each burgers}}
 {{#unless this.devoured}}
@@ -15,7 +25,9 @@
 {{/unless}}
 {{/each}}
 </ul>
+</div>
 
+<div class="second">
 <h2>Seen it!</h2>
 
   {{#each burgers}}
@@ -29,9 +41,6 @@
   {{/each}}
 </div>
 </main>
-<h2>Add a Movie</h2>
-    <form action="/api/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Movie Name">
-      <button type="submit" class="addBurger">Add The Movie</button>
-    </form>
-  </div>
+
+
+

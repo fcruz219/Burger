@@ -1,3 +1,64 @@
 body {
-    background: white;
+    background-color: rgb(202, 126, 3);
+    background-size: cover;
+    background-position: center center;
+    background-repeat:   no-repeat;
+}
+#name{
+    margin-left: 70px
+}
+.addButton {
+    background: lightgrey;
+    width: 30%;
+    border-radius: 25px;
+    padding:10px;
+    margin-bottom: 10px;
+    margin-left: 34%;
+}
+h1 {
+    text-align: center;
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 65px;
+    margin: 50px;
+}
+.container {
+    background: lightgrey;
+    width: 50%;
+    float: left;
+
+    border-radius: 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.change-eaten {
+
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255,255,255);
+    border: none;
+}
+
+.change-eaten:hover {
+    background-color: whitesmoke;
+}
+
+.second {
+
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    width: 46%;
+    margin-right: 10px;
+    padding: 10px;
+    background: lightgrey;
+    border: none;
+    float: right;
 }
